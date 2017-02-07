@@ -1,0 +1,38 @@
+spring:
+    datasource.url: "jdbc:postgresql://localhost:5432/appdb"
+    datasource.username: "postgres"
+    datasource.password: "xxxxxx"
+    datasource.driver-class-name: "org.postgresql.Driver"
+
+    # Specify the DBMS
+    jpa.database: "PostgreSQL"
+
+    # Show or not log for each sql query
+    jpa.show-sql: true
+
+    # Hibernate settings are prefixed with spring.jpa.hibernate.*
+    jpa.hibernate.ddl-auto: "update"
+    jpa.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+    jpa.hibernate.naming_strategy: "org.hibernate.cfg.ImprovedNamingStrategy"
+    
+#    security.user.name: "user"
+#    security.user.password: "pass"
+#    #security.user.role=ADMIN
+
+    # Email Configuration
+    mail.host: smtp.gmail.com
+    mail.username: utest0095@gmail.com
+    mail.password: xxxxxx
+
+    mail.properties.mail.smtp.auth: true
+    mail.properties.mail.smtp.socketFactory.port: 465
+    mail.properties.mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+    mail.properties.mail.smtp.socketFactory.fallback: false
+    
+# set all level info for all processes
+logging.level.*: INFO
+#logging.level.org.springframework.web: ERROR
+#logging.level.org.hibernate: ERROR
+logging.file: currency-convert-master.log
+#logging.path: E://currency-convert-master.log
+     

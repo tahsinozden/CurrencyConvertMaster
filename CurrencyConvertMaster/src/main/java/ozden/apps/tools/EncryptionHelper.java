@@ -37,13 +37,8 @@ public class EncryptionHelper {
 	 * @return
 	 */
 	public static boolean checkPasswordPairEqual(String encryptedPasswrod, String plainTextPassword){
-        BasicTextEncryptor bte = new BasicTextEncryptor();
-        bte.setPassword(secretKeyword);
-        if (plainTextPassword.equals(bte.decrypt(encryptedPasswrod))){
-        	return true;
-        }
-        else{
-        	return false;
-        }
+		BasicTextEncryptor bte = new BasicTextEncryptor();
+		bte.setPassword(secretKeyword);
+		return plainTextPassword.equals(bte.decrypt(encryptedPasswrod));
 	}
 }
